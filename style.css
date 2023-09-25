@@ -1,0 +1,234 @@
+/* global variables */
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+  font-family: Grotesk;
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+/* resets */
+html {
+  font-family: Grotesk;
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--Pale-blue);
+}
+
+/* main container */
+.wrapper {
+  max-width: 37.5rem;
+  background: var(--White);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* left section */
+.left-section {
+  flex-basis: 50%;
+  background: linear-gradient(
+    180deg,
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+  padding: 5rem;
+  border-radius: 0 0 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left-section .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Light-lavender);
+  opacity: 0.9;
+}
+
+.result-container {
+  width: 20rem;
+  height: 20rem;
+  background: linear-gradient(
+    180deg,
+    var(--Violet-blue-circle),
+    var(--Persian-blue-circle)
+  );
+  padding: 5rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  font-size: 7rem;
+  font-weight: 800;
+  color: var(--White);
+}
+
+.from-total {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--Light-lavender);
+  opacity: 0.7;
+}
+
+.notification {
+  font-size: 3rem;
+  color: var(--White);
+}
+
+.description {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--Light-lavender);
+  text-align: center;
+}
+
+/* right section */
+.right-section {
+  flex-basis: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.right-section .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Dark-gray-blue);
+  align-self: flex-start;
+}
+
+.summary-group-container {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-group-container.reaction {
+  background: hsla(0, 100%, 67%, 0.059);
+}
+
+.summary-group-container.memory {
+  background: hsla(39, 100%, 56%, 0.059);
+}
+
+.summary-group-container.verbal {
+  background: hsla(166, 100%, 37%, 0.059);
+}
+
+.summary-group-container.visual {
+  background: hsla(234, 85%, 45%, 0.059);
+}
+
+.type {
+  display: flex;
+  gap: 1rem;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.summary-group-container.reaction .type {
+  color: var(--Light-red);
+}
+
+.summary-group-container.memory .type {
+  color: var(--Orangey-yellow);
+}
+
+.summary-group-container.verbal .type {
+  color: var(--Green-teal);
+}
+
+.summary-group-container.visual .type {
+  color: var(--Cobalt-blue);
+}
+
+.score {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--Dark-gray-blue);
+}
+
+.score span {
+  color: #ccc;
+}
+
+/* cta button */
+.btn {
+  width: 100%;
+  background: var(--Dark-gray-blue);
+  padding: 2rem;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--White);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    180deg,
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+}
+
+/* responsive design */
+@media screen and (min-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 70rem;
+    background: var(--White);
+    border-radius: 3rem;
+    flex-direction: row;
+    box-shadow: 3px 3px 20px #ddd;
+  }
+
+  .left-section {
+    border-radius: 3rem;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- link CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <!-- left section -->
+      <section class="left-section">
+        <!-- title -->
+        <p class="title">Your Result</p>
+        <!-- circle -->
+        <div class="result-container">
+          <h1 class="result">76</h1>
+          <p class="from-total">of 100</p>
+        </div>
+        <!-- notification -->
+        <h1 class="notification">Great</h1>
+        <p class="description">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+
+      <!-- right section -->
+      <section class="right-section">
+        <!-- title -->
+        <p class="title">Summary</p>
+
+        <!-- summary group container -->
+        <div class="summary-group-container reaction">
+          <p class="type">
+            <img src="./assets/images/icon-reaction.svg" alt="reaction-img" />
+            Reaction
+          </p>
+          <p class="score">80 <span>/ 100</span></p>
+        </div>
+
+        <div class="summary-group-container memory">
+          <p class="type">
+            <img src="./assets/images/icon-memory.svg" alt="memory-img" />
+            Memory
+          </p>
+          <p class="score">92 <span>/ 100</span></p>
+        </div>
+
+        <div class="summary-group-container verbal">
+          <p class="type">
+            <img src="./assets/images/icon-verbal.svg" alt="verbal-img" />
+            Verbal
+          </p>
+          <p class="score">61 <span>/ 100</span></p>
+        </div>
+
+        <div class="summary-group-container visual">
+          <p class="type">
+            <img src="./assets/images/icon-visual.svg" alt="visual-img" />
+            Visual
+          </p>
+          <p class="score">72 <span>/ 100</span></p>
+        </div>
+        <!-- cta button -->
+        <button class="btn">Continue</button>
+      </section>
+    </main>
+  </body>
+</html>
